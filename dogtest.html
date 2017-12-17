@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {
+ background: #F5E7C1;
+ color: #000000;
+ margin: 0 24pt 0 24pt;
+ font-family: "Comic Sans MS", cursive, sans-serif;
+ font-size: 13pt;
+ text-align: center;
+}
+div {
+ height: 16pt;
+}
+a {
+ color: #000000;
+ text-decoration: none;
+ font-size: 18pt;
+}
+</style>
+<script type="text/javascript">
+var attributes = ["is 100% dog", "likes chimken nuggers", "has a heckin boopable snoot", "is vvv B R A V E B O Y E", "lovin nd affectonate", "does a good mlem", "is A N G E L B O Y E", "is B A M B O O Z L E B O Y E", "is 12% cato", "is 8% snek", "is 4% A Q U A B O Y E", "13/10", "would like a hug pls", "likes scritches", "is vvv hungery", "happer pupper", "has many paws", "wants to go on walkies", "sometimes borks a bit", "really gud at zoomies", "vv rare", "heckin' smiley boye", "is thicc", "is smol", "is a hecking big boofer", "does a protecc", "does snugs", "real gud frendo", "lil bit floofy", "gas-master", "talented splooter"];
+function find_attribute() {
+ var randIndex = Math.floor(Math.random() * attributes.length);
+ var text = attributes[randIndex];
+ attributes.splice(randIndex, 1);
+ return text;
+}
+
+function extreme_science_test() {
+  var main=document.getElementById('main');
+  text = "Congratulations! Your doggo is 100% G O O D B O Y E! Here's what else we found:";
+  last=document.createElement('div');
+  last.appendChild(document.createTextNode(text));
+  main.appendChild(last);
+  for(i = 0; i < 4; i++){
+    text = find_attribute();
+    last=document.createElement('div');
+    last.appendChild(document.createTextNode(text));
+    main.appendChild(last);
+  }
+}
+</script>
+  <title>Doggo DNA Test</title>
+</head>
+<body onload="extreme_science_test()">
+<div style="float:center; margin-top:18px; color:#000000; height:50pt">
+<div><a>Doggo DNA Test Results</a></div>
+</div>
+<div id="main"></div>
+<div>
+  <br><br><br><br>
+    <button onclick="goBack()">Try again?</button>
+
+  <script>
+  function goBack() {
+      window.history.back();
+  }
+  </script>
+
+</div>
+
+</body>
+</html>
