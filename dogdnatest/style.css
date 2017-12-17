@@ -27,4 +27,6 @@ button {
     width:100px;
 	height:73px;
 	background: url("snoot.png");
+	color: white;
+	font-weight: bold;
 }
